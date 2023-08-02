@@ -1,6 +1,7 @@
 package org.example;
 
 import org.example.entities.Employee;
+import org.example.services.BrazilTaxService;
 import org.example.services.PensionService;
 import org.example.services.SalaryService;
 import org.example.services.TaxService;
@@ -21,7 +22,7 @@ public class Main {
 
         Employee employee = new Employee(name, grossSalary);
 
-        TaxService taxService = new TaxService();
+        TaxService taxService = new BrazilTaxService();
         PensionService pensionService = new PensionService();
         SalaryService salaryService = new SalaryService(taxService, pensionService);
 
